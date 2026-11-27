@@ -4,15 +4,15 @@ A Canada-wide concept for connecting older adults, people with disabilities, and
 
 ## Staff operations
 
-- Staff portal: https://tritchot666.github.io/Independent-Living-Canada/admin.html
+- Staff portal: https://independentlivingcanada.github.io/Independent-Living-Canada/admin.html
 - Staff access is checked server-side against a private allowlist; public account metadata cannot grant access.
 - Provider approvals and request status changes are written through authenticated server-side operations with a database audit log.
 - The first staff account must be provisioned manually by an authorized database administrator after confirming the owner account email.
 
 ## Development site
 
-- Website: https://tritchot666.github.io/Independent-Living-Canada/
-- Source: https://github.com/tritchot666/Independent-Living-Canada
+- Website: https://independentlivingcanada.github.io/Independent-Living-Canada/
+- Source: https://github.com/independentlivingcanada/Independent-Living-Canada
 
 ## Current status
 
