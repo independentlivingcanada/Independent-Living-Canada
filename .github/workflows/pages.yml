@@ -1,5 +1,6 @@
 name: Deploy Independent Living Canada website
 # Pages source confirmed as GitHub Actions
+# Public safeguards run before the Pages artifact is created.
 
 on:
   push:
