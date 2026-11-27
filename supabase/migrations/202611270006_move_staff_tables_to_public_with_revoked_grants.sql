@@ -1,0 +1,13 @@
+create table if not exists public.il_staff_roles(user_id uuid primary key references auth.users(id) on delete cascade,role text not null check(role in ('admin','reviewer')),granted_at timestamptz not null default now(),granted_by uuid references auth.users(id),active boolean not null default true);
+alter table public.il_staff_roles enable row level security;
+revoke all on public.il_staff_roles from public,anon,authenticated;
+grant select,insert,update,delete on public.il_staff_roles to service_role;
+create table if not exists public.il_staff_audit_log(id uuid primary key default gen_random_uuid(),actor_user_id uuid not null references auth.users(id),action text not null,target_type text not null check(target_type in ('provider','request')),target_id uuid not null,before_state jsonb,after_state jsonb,created_at timestamptz not null default now());
+alter table public.il_staff_audit_log enable row level security;
+revoke all on public.il_staff_audit_log from public,anon,authenticated;
+grant select,insert on public.il_staff_audit_log to service_role;
+drop table if exists il_private.staff_audit_log;
+drop table if exists il_private.staff_roles;
+drop schema if exists il_private;
+comment on table public.il_staff_roles is 'Server-only staff allowlist; RLS enabled and all access revoked from public roles.';
+comment on table public.il_staff_audit_log is 'Server-only staff action audit trail; RLS enabled and all access revoked from public roles.';
