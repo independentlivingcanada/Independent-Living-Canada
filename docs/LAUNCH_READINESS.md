@@ -12,7 +12,7 @@ Last reviewed: 2026-11-27
 
 The public website remains a development pilot only. Do not accept real service bookings or sensitive personal information until all release gates below are closed. The controlled pilot area is Winnipeg, Manitoba. Do not advertise Canada-wide provider coverage until local providers are independently verified.
 
-## Implemented
+## Latest additions — 2026-11-27\n\n- [x] Added `find-support.html`, a guided informational navigation tool for common support needs and Manitoba funding routes. It does not submit data, search providers, or confirm eligibility/availability.\n- [x] Added `verification.html` with evidence-based provider review stages and careful status-label definitions.\n- [x] Added a staff-only recruitment tracker in the restricted portal, seeded with known outreach organizations and the updated Brandon Community Options address. Tracker data is browser-local with CSV import/export; it is not a shared database-backed CRM and must not contain client information.\n- [x] Added `docs/COMMUNITY_PARTNERSHIP_PLAN.md`; initial inquiries sent to 211 Manitoba and Manitoba Possible on 2026-11-27. No partnership is confirmed.\n- [ ] Complete live browser tests of the new support finder and staff tracker, including mobile, keyboard and screen-reader checks.\n- [ ] Complete human accessibility review and independent WCAG 2.2 AA audit.\n- [ ] Complete privacy/legal review and approve final privacy, retention, consent, complaints and incident processes.\n\n## Implemented
 
 - Separate GitHub repository, GitHub Pages site and Supabase project in Canada Central.
 - Account registration and sign-in UI, requester service form, provider application form, request history and provider application status.
