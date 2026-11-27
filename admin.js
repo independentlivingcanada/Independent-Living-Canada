@@ -21,7 +21,7 @@ const seedRecruitment=[
 ["Dawn's Shuttle","dawnsshuttle@gmail.com","Service provider","Invited","","Await response"],
 ["Comfort Keepers Winnipeg","clientcare@comfortkeeperswpg.ca","Service provider","Invited","","Await response"],
 ["Blossoms Senior Care","info@blossomsseniorcare.com","Service provider","Invited","","Await response"],
-["Community Respite Services","comresp@mts.net","Community organization","Invited","","Clarify referral / service role"],
+["Community Respite Services","comresp@mts.net","Community organization","Follow-up due","","Previous email reported delivery failure; verify address before retry"],
 ["Brandon Community Options","reception@bcoinc.ca","Community organization","Invited","","Use updated email; await response"],
 ["Career Connections","office@cciwestman.ca","Community organization","Invited","","Clarify referral / service role"],
 ["Manitoba Possible","info@manitobapossible.ca","Referral / information partner","Invited","","Explore partnership and accessibility input"],
