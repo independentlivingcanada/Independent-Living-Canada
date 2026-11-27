@@ -197,14 +197,31 @@ async function submitProvider(event) {
     profile=created.data;error=created.error;
   }
   if (!error && profile) {
-    const {data:existing,error:serviceReadError}=await supabase.from("il_provider_services").select("category,service_area").eq("provider_id",profile.id);
+    const {data:existing,error:serviceReadError}=await supabase.from("il_provider_services")
+      .select("id,category,service_area,active").eq("provider_id",profile.id);
     if (serviceReadError) error=serviceReadError;
     else {
-      const rows=categories.filter(c=>!existing.some(s=>s.category===c&&s.service_area.toLowerCase()===v.service_area.trim().toLowerCase()))
-        .map(category=>({provider_id:profile.id,category,service_area:v.service_area.trim(),active:false}));
-      if (rows.length) {
-        const inserted=await supabase.from("il_provider_services").insert(rows);
-        error=inserted.error;
+      const area=v.service_area.trim();
+      const retained=new Set();
+      const toDelete=[];
+      for (const service of (existing||[])) {
+        const shouldKeep=categories.includes(service.category)
+          && (service.service_area||"").trim().toLocaleLowerCase()===area.toLocaleLowerCase()
+          && !retained.has(service.category);
+        if (shouldKeep) retained.add(service.category);
+        else toDelete.push(service.id);
+      }
+      for (const id of toDelete) {
+        const removed=await supabase.from("il_provider_services").delete().eq("id",id);
+        if (removed.error) { error=removed.error; break; }
+      }
+      if (!error) {
+        const rows=categories.filter(category=>!retained.has(category))
+          .map(category=>({provider_id:profile.id,category,service_area:area,active:false}));
+        if (rows.length) {
+          const inserted=await supabase.from("il_provider_services").insert(rows);
+          error=inserted.error;
+        }
       }
     }
   }
