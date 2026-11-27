@@ -26,8 +26,8 @@ The public website remains a development pilot only. Do not accept real service 
 - [x] Synthetic database transaction verified provider application creation, inactive initial services, provider self-approval prevention, request creation with consent and private contact, requester ownership isolation, cross-account denial for request/private contact, staff provider approval/suspension, service deactivation on suspension, request status update and three audit events.
 - [x] Synthetic test transaction was rolled back. No synthetic provider, request, contact or audit records were retained.
 - [ ] Browser-driven provider and requester form submissions using separate synthetic email accounts remain to be completed; SQL tests do not replace a full browser/Auth email-flow test.
-- [ ] Test provider rejection and full staff queue rendering with a non-empty synthetic queue in a browser.
-- [ ] Document staff offboarding and backup reviewer process.
+- [x] Provider rejection status and its audit event tested in a rollback-only database transaction.\n- [ ] Full staff queue rendering with a non-empty synthetic queue in a browser remains outstanding.
+- [x] Drafted staff access lifecycle, offboarding, backup-role and operating procedures in `docs/PILOT_OPERATIONS_RUNBOOK.md`. Named backup staff and actual offboarding test remain outstanding.
 
 ## Test evidence — 2026-11-27
 
@@ -61,7 +61,7 @@ The owner independently confirmed the staff portal now displays “Signed in · 
 - [x] Provider self-approval guard and inactive-before-approval behavior tested.
 - [x] Staff approval/suspension, service deactivation and audit events tested.
 - [x] Anon/authenticated/service_role function grants reviewed.
-- [ ] Browser end-to-end form submission and account email flows still require synthetic accounts in a real browser. Provider-response-specific isolation also remains to be verified.
+- [ ] Browser end-to-end form submission and account email flows still require synthetic accounts in a real browser. Provider-response-specific isolation and a non-empty browser queue render also remain to be verified.
 - [x] Provider profile/service cross-account read and update denial plus negative-consent rejection tested in a rollback-only synthetic transaction. Provider-response-specific isolation remains to be verified.
 - [ ] Confirm user-facing error messages and browser network responses do not expose private data or secrets.
 
@@ -76,7 +76,7 @@ The owner independently confirmed the staff portal now displays “Signed in · 
 ### Privacy, legal and accessibility
 - [ ] Complete privacy impact review, retention/deletion schedule and privacy contact. The current privacy notice is a development draft, not a final legal policy: https://tritchot666.github.io/Independent-Living-Canada/privacy.html.
 - [ ] Publish legally reviewed privacy, terms, consent, complaints and incident-response materials for applicable Canadian and Manitoba requirements.
-- [ ] Complete manual keyboard, screen-reader, zoom/reflow, contrast, focus, labels/errors and mobile testing against WCAG 2.2 AA. The accessibility statement is a draft and makes no conformance claim: https://tritchot666.github.io/Independent-Living-Canada/accessibility.html.
+- [ ] Complete manual keyboard, screen-reader, zoom/reflow, contrast, focus, labels/errors and mobile testing against WCAG 2.2 AA. A detailed tester checklist is prepared in `docs/ACCESSIBILITY_MANUAL_TEST_PLAN.md`. The accessibility statement is a draft and makes no conformance claim: https://tritchot666.github.io/Independent-Living-Canada/accessibility.html.
 - [ ] Establish a monitored accessibility feedback contact and accessible non-web alternative.
 
 ### Pilot operations
@@ -87,7 +87,7 @@ The owner independently confirmed the staff portal now displays “Signed in · 
 - [ ] Track incidents, complaints, missed pickups and service quality.
 - [ ] Expand beyond Winnipeg only after separate local verification.
 
-## Current advisor findings
+## New quality controls and operating preparation\n\n- [x] Added a CI static safeguard script that checks required public assets, development-only warnings, privacy/accessibility draft notices, consent wiring, staff-function proxy usage and scans public assets for privileged key patterns. The first workflow run is in progress; do not call it passed until GitHub Actions reports success.\n- [x] Added draft Winnipeg pilot operations runbook covering request triage, provider approval gates, incident response, staff lifecycle and proposed service levels. Named operators, contacts and legal approval remain outstanding.\n- [x] Added manual accessibility test plan. No human or assistive-technology audit has been performed.\n- [x] Provider rejection and audit event verified in a rollback-only transaction; live tables remain empty apart from the owner staff role.\n\n## Current advisor findings
 
 - Warning: leaked-password protection disabled.
 - Informational: RLS is enabled with no policies on the private staff role and audit tables. This is intentional in the current design because anon/authenticated privileges are revoked and only service_role accesses them. Recheck after future permission changes.
