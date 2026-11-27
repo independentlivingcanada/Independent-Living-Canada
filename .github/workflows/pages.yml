@@ -14,6 +14,7 @@ on:
       - "admin.css"
       - "privacy.html"
       - "accessibility.html"
+      - "scripts/check-public-site.mjs"
       - ".github/workflows/pages.yml"
   workflow_dispatch:
 
@@ -43,6 +44,8 @@ jobs:
         run: |
           node --check --input-type=module < app.js
           node --check --input-type=module < admin.js
+      - name: Check public-site safeguards
+        run: node scripts/check-public-site.mjs
       - name: Prepare website files
         run: |
           mkdir -p _site
