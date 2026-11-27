@@ -32,3 +32,7 @@ Begin with 211 Manitoba and Manitoba Possible, followed by seniors and caregiver
 - 211 Manitoba: emailed info@mb.211.ca to ask about the listing process, collaboration/referral routes and data quality standards. Their published contact page explicitly accepts suggestions for listings and corrections.
 - Manitoba Possible: emailed info@manitobapossible.ca to ask about disability-community consultation, accessibility feedback and appropriate partnership contacts.
 - These are inquiries only. No partnership, endorsement, referral agreement or listing approval is confirmed.
+
+## Accessibility funding opportunity — checked 2026-11-27
+The Manitoba Accessibility Fund's 2026-27 intake offered up to $50,000 for eligible Manitoba organizations/businesses and closed February 20, 2026. Do not treat this as currently open. Monitor the official program page for the next intake. Eligibility includes Manitoba-based eligible entity types and operating/registration conditions; confirm the current guidelines and the project's legal entity status before preparing an application. A project to improve accessible digital information or create accessibility resources may fit the program's objectives, but eligibility and funding are not guaranteed.
+Official program page: https://accessibilitymb.ca/grants-and-awards/manitoba-accessibility-fund.html
