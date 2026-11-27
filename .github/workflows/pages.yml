@@ -9,6 +9,9 @@ on:
       - "app.js"
       - "styles.css"
       - "config.js"
+      - "admin.html"
+      - "admin.js"
+      - "admin.css"
       - ".github/workflows/pages.yml"
   workflow_dispatch:
 
@@ -35,11 +38,13 @@ jobs:
         with:
           enablement: true
       - name: Validate JavaScript syntax
-        run: node --check --input-type=module < app.js
+        run: |
+          node --check --input-type=module < app.js
+          node --check --input-type=module < admin.js
       - name: Prepare website files
         run: |
           mkdir -p _site
-          cp index.html app.js styles.css config.js _site/
+          cp index.html app.js styles.css config.js admin.html admin.js admin.css _site/
           touch _site/.nojekyll
       - name: Upload website artifact
         uses: actions/upload-pages-artifact@v3
