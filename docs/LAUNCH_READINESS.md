@@ -88,7 +88,7 @@ The owner independently confirmed the staff portal now displays “Signed in · 
 
 ### Pilot operations
 - [ ] Recruit and verify a small initial Winnipeg provider cohort. No provider has agreed to join or been verified/onboarded.
-- [ ] Three exploratory provider/sector outreach emails remain drafts; none has been sent.
+- [x] Multiple provider and community-organization outreach emails were sent from the project Gmail account on 2026-11-27. The inbox review found no confirmed provider acceptance or partnership and at least three delivery failures. Some messages used Google redirect-wrapped website URLs despite the direct-link requirement. The messages reviewed also lacked a clear unsubscribe mechanism. Pause further promotional/provider recruitment emails until the applicable CASL consent basis and message classification are documented and a compliant sender-identification/unsubscribe template is adopted.
 - [ ] Establish response-time targets, escalation coverage, cancellation handling and a no-match pathway.
 - [ ] Run a supervised manual pilot with explicit confirmation from the recipient and provider.
 - [ ] Track incidents, complaints, missed pickups and service quality.
