@@ -26,7 +26,8 @@ The public website remains a development pilot only. Do not accept real service 
 - [x] Synthetic database transaction verified provider application creation, inactive initial services, provider self-approval prevention, request creation with consent and private contact, requester ownership isolation, cross-account denial for request/private contact, staff provider approval/suspension, service deactivation on suspension, request status update and three audit events.
 - [x] Synthetic test transaction was rolled back. No synthetic provider, request, contact or audit records were retained.
 - [ ] Browser-driven provider and requester form submissions using separate synthetic email accounts remain to be completed; SQL tests do not replace a full browser/Auth email-flow test.
-- [x] Provider rejection status and its audit event tested in a rollback-only database transaction.\n- [ ] Full staff queue rendering with a non-empty synthetic queue in a browser remains outstanding.
+- [x] Provider rejection status and its audit event tested in a rollback-only database transaction.
+- [ ] Full staff queue rendering with a non-empty synthetic queue in a browser remains outstanding.
 - [x] Drafted staff access lifecycle, offboarding, backup-role and operating procedures in `docs/PILOT_OPERATIONS_RUNBOOK.md`. Named backup staff and actual offboarding test remain outstanding.
 
 ## Test evidence — 2026-11-27
