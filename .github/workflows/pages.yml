@@ -1,4 +1,5 @@
 name: Deploy Independent Living Canada website
+# Pages source confirmed as GitHub Actions
 
 on:
   push:
