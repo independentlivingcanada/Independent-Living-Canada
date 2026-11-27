@@ -24,7 +24,7 @@ The public website remains a development pilot only. Do not accept real service 
 
 ## Staff operations
 
-- [x] Restricted staff portal: https://tritchot666.github.io/Independent-Living-Canada/admin.html.
+- [x] Restricted staff portal: https://independentlivingcanada.github.io/Independent-Living-Canada/admin.html.
 - [x] Owner admin role is provisioned and active; the owner successfully signed in and loaded the review queue in a real browser session.
 - [x] Edge Function verifies the caller's JWT and checks the private staff allowlist before returning queue data.
 - [x] Staff role and audit tables have RLS enabled and no anon/authenticated table privileges; staff actions are server-side only.
@@ -81,9 +81,9 @@ The owner independently confirmed the staff portal now displays “Signed in · 
 - [ ] Confirm the person receiving support has consented; a family supporter cannot silently substitute their consent.
 
 ### Privacy, legal and accessibility
-- [ ] Complete privacy impact review, retention/deletion schedule and privacy contact. The current privacy notice is a development draft, not a final legal policy: https://tritchot666.github.io/Independent-Living-Canada/privacy.html.
+- [ ] Complete privacy impact review, retention/deletion schedule and privacy contact. The current privacy notice is a development draft, not a final legal policy: https://independentlivingcanada.github.io/Independent-Living-Canada/privacy.html.
 - [ ] Publish legally reviewed privacy, terms, consent, complaints and incident-response materials for applicable Canadian and Manitoba requirements.
-- [ ] Complete manual keyboard, screen-reader, zoom/reflow, contrast, focus, labels/errors and mobile testing against WCAG 2.2 AA. A detailed tester checklist is prepared in `docs/ACCESSIBILITY_MANUAL_TEST_PLAN.md`. The accessibility statement is a draft and makes no conformance claim: https://tritchot666.github.io/Independent-Living-Canada/accessibility.html.
+- [ ] Complete manual keyboard, screen-reader, zoom/reflow, contrast, focus, labels/errors and mobile testing against WCAG 2.2 AA. A detailed tester checklist is prepared in `docs/ACCESSIBILITY_MANUAL_TEST_PLAN.md`. The accessibility statement is a draft and makes no conformance claim: https://independentlivingcanada.github.io/Independent-Living-Canada/accessibility.html.
 - [ ] Establish a monitored accessibility feedback contact and accessible non-web alternative.
 
 ### Pilot operations
