@@ -2,6 +2,13 @@
 
 A Canada-wide concept for connecting older adults, people with disabilities, and family supporters with practical local help. The first controlled pilot is intended for Winnipeg, Manitoba.
 
+## Staff operations
+
+- Staff portal: https://tritchot666.github.io/Independent-Living-Canada/admin.html
+- Staff access is checked server-side against a private allowlist; public account metadata cannot grant access.
+- Provider approvals and request status changes are written through authenticated server-side operations with a database audit log.
+- The first staff account must be provisioned manually by an authorized database administrator after confirming the owner account email.
+
 ## Development site
 
 - Website: https://tritchot666.github.io/Independent-Living-Canada/
@@ -11,7 +18,7 @@ A Canada-wide concept for connecting older adults, people with disabilities, and
 
 **Development pilot only — not open for public service bookings.** Use fictional details for testing. Do not submit real personal, financial, or health information.
 
-The current website supports account registration/sign-in, service-request submission, request history, and provider applications. Provider applications remain pending review; providers are not publicly listed or matched automatically. There are no verified public providers or customer bookings yet.
+The current website supports account registration/sign-in, service-request submission, request history, provider applications, and a restricted staff review portal. Provider applications remain pending review until a staff member verifies them; providers are not publicly listed or matched automatically. There are no verified public providers or customer bookings yet.
 
 The database is a separate Supabase project for this initiative. It is not the QuoteBack production database.
 
