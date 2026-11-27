@@ -15,6 +15,10 @@ on:
       - "admin.css"
       - "privacy.html"
       - "accessibility.html"
+      - "funding.html"
+      - "find-support.html"
+      - "verification.html"
+      - "resources.html"
       - "scripts/check-public-site.mjs"
       - ".github/workflows/pages.yml"
   workflow_dispatch:
@@ -50,7 +54,7 @@ jobs:
       - name: Prepare website files
         run: |
           mkdir -p _site
-          cp index.html app.js styles.css config.js admin.html admin.js admin.css privacy.html accessibility.html _site/
+          cp index.html app.js styles.css config.js admin.html admin.js admin.css privacy.html accessibility.html funding.html find-support.html verification.html resources.html _site/
           touch _site/.nojekyll
       - name: Upload website artifact
         uses: actions/upload-pages-artifact@v3
