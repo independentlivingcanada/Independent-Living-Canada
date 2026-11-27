@@ -37,3 +37,8 @@ The concept covers accessible non-emergency rides, companionship, errands/grocer
 - Only then consider enabling real bookings, initially within the Winnipeg pilot area.
 
 See [docs/LAUNCH_READINESS.md](docs/LAUNCH_READINESS.md) for the operational checklist and current blockers.
+
+
+## Name and affiliation review — launch gate
+
+The project is in development and uses a name identical to an established federal nonprofit, Independent Living Canada / Vie Autonome Canada. This project is **not affiliated with or endorsed by** that organization. Legal/trademark and name-confusion due diligence is underway. Pause promotional/provider recruitment outreach and public launch under the name until review is complete. Preserve existing code and project assets; do not assume name clearance.
