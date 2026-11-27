@@ -62,8 +62,8 @@ The owner independently confirmed the staff portal now displays “Signed in · 
 - [x] Provider self-approval guard and inactive-before-approval behavior tested.
 - [x] Staff approval/suspension, service deactivation and audit events tested.
 - [x] Anon/authenticated/service_role function grants reviewed.
-- [ ] Browser end-to-end form submission and account email flows still require synthetic accounts in a real browser. Provider-response-specific isolation and a non-empty browser queue render also remain to be verified.
-- [x] Provider profile/service cross-account read and update denial plus negative-consent rejection tested in a rollback-only synthetic transaction. Provider-response-specific isolation remains to be verified.
+- [x] Provider response/invite RLS: the authorized account could read its synthetic response and invite; an unrelated account could not. Test transaction rolled back. This SQL test used one synthetic owner identity for requester/provider roles, so separate-account requester-versus-provider visibility still needs its own test.\n- [ ] Browser end-to-end form submission and account email flows still require synthetic accounts in a real browser. A non-empty browser queue render also remains to be verified.
+- [x] Provider profile/service cross-account read and update denial plus negative-consent rejection tested in a rollback-only synthetic transaction. Provider response/invite read isolation was also tested with an unrelated account denied.
 - [ ] Confirm user-facing error messages and browser network responses do not expose private data or secrets.
 
 ### Provider verification and safeguarding
