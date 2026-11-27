@@ -19,10 +19,19 @@ The public website is a development pilot only. Do not accept real service booki
 - Provider service category/area synchronization now runs in one authenticated, SECURITY INVOKER database function. It checks ownership and preserves active state for unchanged services.
 - Public frontend contains only the Supabase publishable key; never place a service-role/secret key in browser assets.
 
+## Staff operations implemented
+
+- [x] Restricted staff portal at https://tritchot666.github.io/Independent-Living-Canada/admin.html.
+- [x] Server-verified Supabase JWT plus private staff allowlist check; the frontend cannot grant staff access.
+- [x] Private staff-role table with RLS enabled and no privileges for anon/authenticated.
+- [x] Server-only staff action functions; only service_role can execute them. Provider approval/suspension and request status changes are transactionally audited.
+- [ ] Provision the owner staff account after confirming the exact email used for the owner login; no account has been granted staff access yet.
+- [ ] Complete authenticated functional testing after provisioning.
+
 ## Outstanding launch gates
 
 ### Authentication and account security
-- [ ] Enable leaked-password protection in Supabase Auth. The Security Advisor currently reports auth_leaked_password_protection.
+- [ ] Supabase organization is on the Free plan. Supabase documents leaked-password protection as Pro and above; this control cannot be enabled on the current plan. Upgrade only if approved, then enable it under Authentication → Sign In / Providers → Email. The website now requires 12 characters for new passwords, but this is a browser-side mitigation, not a replacement for server-side leaked-password protection.
 - [ ] Set Supabase Site URL and allowed redirect URL to https://tritchot666.github.io/Independent-Living-Canada/.
 - [ ] Confirm email verification and password reset flows.
 - [ ] Confirm reasonable password strength and rate limits.
@@ -77,6 +86,7 @@ The public website is a development pilot only. Do not accept real service booki
 4. There is no staff-only review interface or configured staff role yet.
 5. No providers or service requests are currently recorded in the application database.
 6. The deployed page has not yet been visually inspected in a real browser session after the latest changes.
+7. Authenticated requester/provider end-to-end tests still require synthetic accounts and a real browser session.
 
 ## Recent technical change
 
