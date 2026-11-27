@@ -165,7 +165,8 @@ async function submitRequest(event) {
     p_accessibility_logistics:v.accessibility_logistics||"",
     p_recipient_name:v.recipient_name||null,p_contact_name:v.contact_name,
     p_contact_email:v.contact_email||null,p_contact_phone:v.contact_phone||null,
-    p_preferred_contact_method:v.preferred_contact_method
+    p_preferred_contact_method:v.preferred_contact_method,
+    p_consent_confirmed:v.consent==="on"
   });
   submit.disabled=false;submit.textContent="Submit service request";
   if (error) { showToast("Request not submitted: "+error.message,true); return; }
