@@ -61,6 +61,8 @@ function setAuthMode(mode) {
   $("authModeText").textContent = mode === "signup" ? "Already have an account?" : "New here?";
   $("authModeToggle").textContent = mode === "signup" ? "Sign in" : "Create an account";
   $("password").autocomplete = mode === "signup" ? "new-password" : "current-password";
+  $("password").minLength = mode === "signup" ? 12 : 8;
+  $("password").setAttribute("aria-describedby","passwordHelp");
   $("authHeading").textContent = mode === "signup" ? "Create your account" : "Welcome back";
 }
 function showAuthenticated(user) {
@@ -223,6 +225,7 @@ function setupEvents() {
     const email=$("email").value.trim(),password=$("password").value;
     const button=$("authSubmit");button.disabled=true;
     if(authMode==="signup") {
+      if(password.length<12){button.disabled=false;showToast("Please use at least 12 characters for a new password.",true);return;}
       const {data,error}=await supabase.auth.signUp({email,password,options:{emailRedirectTo:window.location.origin+window.location.pathname}});
       button.disabled=false;
       if(error){showToast(error.message,true);return;}
