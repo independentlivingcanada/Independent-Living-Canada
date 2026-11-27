@@ -27,3 +27,8 @@ Build referral and information partnerships that help Manitobans find appropriat
 
 ## Suggested first outreach
 Begin with 211 Manitoba and Manitoba Possible, followed by seniors and caregiver organizations. Use each organization's published partnership/contact route and keep a dated outreach log in the restricted staff workflow.
+
+## Confirmed initial outreach — 2026-11-27
+- 211 Manitoba: emailed info@mb.211.ca to ask about the listing process, collaboration/referral routes and data quality standards. Their published contact page explicitly accepts suggestions for listings and corrections.
+- Manitoba Possible: emailed info@manitobapossible.ca to ask about disability-community consultation, accessibility feedback and appropriate partnership contacts.
+- These are inquiries only. No partnership, endorsement, referral agreement or listing approval is confirmed.
