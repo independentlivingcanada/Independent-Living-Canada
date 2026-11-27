@@ -36,3 +36,16 @@ Begin with 211 Manitoba and Manitoba Possible, followed by seniors and caregiver
 ## Accessibility funding opportunity — checked 2026-11-27
 The Manitoba Accessibility Fund's 2026-27 intake offered up to $50,000 for eligible Manitoba organizations/businesses and closed February 20, 2026. Do not treat this as currently open. Monitor the official program page for the next intake. Eligibility includes Manitoba-based eligible entity types and operating/registration conditions; confirm the current guidelines and the project's legal entity status before preparing an application. A project to improve accessible digital information or create accessibility resources may fit the program's objectives, but eligibility and funding are not guaranteed.
 Official program page: https://accessibilitymb.ca/grants-and-awards/manitoba-accessibility-fund.html
+
+## Lived-experience advisory group
+Proposed first cohort: three to five compensated advisors, including older adults, people with disabilities and family caregivers. Invite participants through established community organizations rather than collecting personal details through an untested public form.
+
+Principles:
+- Pay an honorarium where funding permits; do not assume unpaid labour.
+- Offer accessible meeting formats, plain-language materials, remote/in-person options and support for communication/access needs.
+- Obtain informed consent for participation and any use of feedback; do not publish names or stories without separate permission.
+- Ask advisors to test navigation, language, service boundaries and trust labels, not to certify providers or provide individual legal/medical advice.
+- Record themes and actions without unnecessary personal data.
+- Do not describe an advisory group as established until members have accepted and terms of reference are agreed.
+
+No advisors have been recruited or confirmed yet.
