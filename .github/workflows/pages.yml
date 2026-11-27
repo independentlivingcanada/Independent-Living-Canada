@@ -34,6 +34,8 @@ jobs:
         uses: actions/configure-pages@v5
         with:
           enablement: true
+      - name: Validate JavaScript syntax
+        run: node --check --input-type=module < app.js
       - name: Prepare website files
         run: |
           mkdir -p _site
