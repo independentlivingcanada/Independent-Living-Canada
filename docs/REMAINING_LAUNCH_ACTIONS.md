@@ -5,10 +5,9 @@ This is an execution checklist, not a statement that the pilot is approved. Keep
 ## 1. Provider recruitment and verification
 
 ### Recruitment status
-- Three exploratory Gmail drafts were previously prepared for Anchor Senior Services, Gullwing Care Services, and Transportation Options Network for Seniors (TONS).
-- No message is recorded as sent. No provider has agreed to participate or been approved.
-- Do not represent a prospect as a partner, provider, sponsor, or available service.
-- Before sending any commercial electronic message, confirm the sender's legal/business identity, valid mailing address and contact method, and a working unsubscribe mechanism. Record consent or another valid CASL basis and honour unsubscribe requests. Have Canadian counsel review the outreach approach where uncertain.
+- Multiple provider and community-organization outreach emails were sent from the project Gmail account on 2026-11-27. The inbox review found no confirmed provider acceptance or partnership and at least three delivery failures. Some messages used Google redirect-wrapped website URLs despite the direct-link requirement. The messages reviewed also lacked a clear unsubscribe mechanism.
+- No provider has agreed to participate or been approved. Do not represent a prospect as a partner, provider, sponsor, or available service.
+- Pause further promotional/provider recruitment emails until the applicable CASL consent basis and message classification are documented and a compliant sender-identification/unsubscribe template is adopted. A publicly displayed email address alone is not enough: the address must not carry an anti-solicitation notice, and the message must be relevant to the recipient's role. Honour unsubscribe requests promptly.
 - TONS is a sector network/referral contact, not presumed to be a service provider.
 
 ### Provider screening checklist (complete separately for each provider)
