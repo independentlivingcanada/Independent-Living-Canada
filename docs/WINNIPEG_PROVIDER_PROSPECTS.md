@@ -19,7 +19,7 @@ Last checked: 2026-11-27
 - Source: https://wrha.mb.ca/files/joint-replacement-transportation-services-wpg.pdf
 
 ### Skyline Transit
-- Local business listing: accessible transportation for riders with mobility challenges; phone 431-278-2862; https://skylinetransit.ca/ (verify official domain/contact before use).
+- Local business listing: accessible transportation for riders with mobility challenges; phone 431-278-2862; verify the official website/contact through the business directly before use.
 - Pilot fit: possible accessible ride lead. Verify exact legal entity, vehicle/driver standards, insurance, service boundaries, and official contact details before outreach.
 - Source: business directory research, 2026-11-27; not an endorsement.
 
@@ -31,7 +31,7 @@ Last checked: 2026-11-27
 - Source: business directory research, 2026-11-27; not an endorsement.
 
 ### HomEquip
-- Local business listing: Manitoba medical-equipment and mobility-equipment supplier with delivery, rentals, home assessments and home accessibility products; phone 204-949-2300; https://homequip.ca/ (verify exact official URL before outreach).
+- Local business listing: Manitoba medical-equipment and mobility-equipment supplier with delivery, rentals, home assessments and home accessibility products; phone 204-949-2300; verify the official website/contact through the business directly before use.
 - Pilot fit: potential referral or installation partner for equipment/access solutions; confirm whether it performs modifications/installation itself or refers to contractors, and verify qualifications and liability.
 - Source: business directory research, 2026-11-27; not an endorsement.
 
