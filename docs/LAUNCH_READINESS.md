@@ -65,13 +65,14 @@ The public website is a development pilot only. Do not accept real service booki
 - [ ] Confirm the person receiving support has consented; a family supporter must not silently substitute their own consent.
 
 ### Privacy, legal, and accessibility
-- [ ] Complete a privacy impact review and data-retention/deletion schedule.
+- [ ] Complete a privacy impact review and data-retention/deletion schedule. The draft privacy notice is at https://tritchot666.github.io/Independent-Living-Canada/privacy.html; it is not a final legal policy.
 - [ ] Minimize collection of health and disability information; do not collect unnecessary diagnoses or documents.
 - [ ] Publish privacy, terms, consent, complaints, and incident-response materials reviewed for applicable Canadian and Manitoba requirements.
-- [ ] Test keyboard navigation, screen readers, zoom/reflow, contrast, form labels/errors, and focus visibility against WCAG 2.2 AA.
+- [ ] Test keyboard navigation, screen readers, zoom/reflow, contrast, form labels/errors, and focus visibility against WCAG 2.2 AA. The draft accessibility statement is at https://tritchot666.github.io/Independent-Living-Canada/accessibility.html; no conformance claim has been made.
 - [ ] Confirm accessible alternatives for people who cannot use the website.
 
 ### Pilot operations
+- [ ] Review the prospect list in docs/WINNIPEG_PROVIDER_PROSPECTS.md. Three exploratory outreach drafts are in Gmail; none has been sent and no provider has agreed to join.
 - [ ] Recruit and verify a small initial Winnipeg provider cohort before advertising service availability.
 - [ ] Run a manual, supervised pilot with explicit confirmation from the recipient and provider.
 - [ ] Establish response-time targets, escalation coverage, cancellation handling, and a no-match pathway.
