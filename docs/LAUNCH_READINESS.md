@@ -94,6 +94,12 @@ The owner independently confirmed the staff portal now displays “Signed in · 
 - Warning: leaked-password protection disabled.
 - Informational: RLS is enabled with no policies on the private staff role and audit tables. This is intentional in the current design because anon/authenticated privileges are revoked and only service_role accesses them. Recheck after future permission changes.
 
+## Latest database review — 2026-11-27
+
+- [x] Added and verified indexes for `il_staff_roles.granted_by` and `il_staff_audit_log.actor_user_id`, covering the two staff-table foreign keys flagged by the performance advisor.
+- [ ] The security advisor still reports leaked-password protection disabled (plan-limited on the current Free plan). The no-policy notices for the staff role/audit tables are intentional: RLS is enabled and anon/authenticated privileges are revoked.
+- [ ] Performance advisor still reports two pairs of permissive SELECT policies on requests and provider responses. They serve distinct requester/provider access paths and must not be removed without replacing both paths and re-running cross-account RLS tests. Unused-index notices are expected while the pilot tables are empty; reassess after real workload exists.
+
 ## Release rule
 
 Do not remove the development-pilot warning or invite the public to submit real requests until the browser/Auth tests, provider verification, privacy/legal work, accessibility testing, incident-response arrangements and supervised pilot gates are complete.
