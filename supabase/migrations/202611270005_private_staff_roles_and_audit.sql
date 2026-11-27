@@ -1,0 +1,14 @@
+create schema if not exists il_private;
+revoke all on schema il_private from public, anon, authenticated;
+grant usage on schema il_private to service_role;
+create table if not exists il_private.staff_roles(user_id uuid primary key references auth.users(id) on delete cascade,role text not null check(role in ('admin','reviewer')),granted_at timestamptz not null default now(),granted_by uuid references auth.users(id),active boolean not null default true);
+alter table il_private.staff_roles enable row level security;
+revoke all on il_private.staff_roles from public, anon, authenticated;
+grant select,insert,update,delete on il_private.staff_roles to service_role;
+create table if not exists il_private.staff_audit_log(id uuid primary key default gen_random_uuid(),actor_user_id uuid not null references auth.users(id),action text not null,target_type text not null check(target_type in ('provider','request')),target_id uuid not null,before_state jsonb,after_state jsonb,created_at timestamptz not null default now());
+alter table il_private.staff_audit_log enable row level security;
+revoke all on il_private.staff_audit_log from public, anon, authenticated;
+grant select,insert on il_private.staff_audit_log to service_role;
+comment on schema il_private is 'Private operational authorization and audit records; never expose through the public Data API.';
+comment on table il_private.staff_roles is 'Staff access allowlist. Provision only through trusted database administration, never from client metadata.';
+comment on table il_private.staff_audit_log is 'Staff action audit trail for review operations.';
