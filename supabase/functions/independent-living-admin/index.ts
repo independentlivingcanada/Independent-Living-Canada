@@ -9,7 +9,7 @@ Deno.serve((req:Request)=>{
   const origin=request.headers.get("Origin");if(origin&&origin!==allowedOrigin)return reply({error:"Origin not allowed"},403);
   const actor=ctx.userClaims?.sub;if(!actor)return reply({error:"Sign-in required"},401);
   const admin=ctx.supabaseAdmin;
-  const {data:staff,error:staffError}=await admin.schema("il_private").from("staff_roles").select("role").eq("user_id",actor).eq("active",true).maybeSingle();
+  const {data:staff,error:staffError}=await admin.from("il_staff_roles").select("role").eq("user_id",actor).eq("active",true).maybeSingle();
   if(staffError||!staff)return reply({error:"Staff access required"},403);
   if(request.method==="GET"){
    const [p,s,r]=await Promise.all([
@@ -31,7 +31,7 @@ Deno.serve((req:Request)=>{
    const upd=await admin.from("il_provider_profiles").update({onboarding_status:next}).eq("id",id).select("id,onboarding_status,display_name").single();if(upd.error)return reply({error:"Provider status update failed"},500);
    const svc=await admin.from("il_provider_services").update({active:next==="approved"}).eq("provider_id",id);
    if(svc.error){await admin.from("il_provider_profiles").update({onboarding_status:old.data.onboarding_status}).eq("id",id);return reply({error:"Service activation failed; provider status rolled back"},500)}
-   const log=await admin.schema("il_private").from("staff_audit_log").insert({actor_user_id:actor,action:"provider_"+next,target_type:"provider",target_id:id,before_state:old.data,after_state:upd.data});
+   const log=await admin.from("il_staff_audit_log").insert({actor_user_id:actor,action:"provider_"+next,target_type:"provider",target_id:id,before_state:old.data,after_state:upd.data});
    if(log.error)return reply({error:"Change saved but audit logging failed; contact technical support"},500);
    return reply({ok:true,provider:upd.data});
   }
@@ -39,7 +39,7 @@ Deno.serve((req:Request)=>{
    const next=body.status;if(!states.has(next||""))return reply({error:"Invalid request status"},400);
    const old=await admin.from("il_service_requests").select("id,status").eq("id",id).maybeSingle();if(old.error||!old.data)return reply({error:"Request not found"},404);
    const upd=await admin.from("il_service_requests").update({status:next}).eq("id",id).select("id,status").single();if(upd.error)return reply({error:"Request status update failed"},500);
-   const log=await admin.schema("il_private").from("staff_audit_log").insert({actor_user_id:actor,action:"request_"+next,target_type:"request",target_id:id,before_state:old.data,after_state:upd.data});
+   const log=await admin.from("il_staff_audit_log").insert({actor_user_id:actor,action:"request_"+next,target_type:"request",target_id:id,before_state:old.data,after_state:upd.data});
    if(log.error)return reply({error:"Change saved but audit logging failed; contact technical support"},500);
    return reply({ok:true,request:upd.data});
   }
