@@ -2,6 +2,12 @@
 
 Last reviewed: 2026-11-27
 
+## Latest work in this review — 2026-11-27
+
+- [x] Added `docs/REMAINING_LAUNCH_ACTIONS.md`, a detailed provider screening, synthetic browser acceptance, privacy/legal sign-off, human accessibility audit, operating-role, account-security and release checklist.
+- [x] Aligned the staff portal's CSS with the site's light-blue visual theme and updated browser theme colours across public, staff, privacy and accessibility pages.
+- [ ] The visual changes are awaiting the current GitHub Pages workflow run; no live visual/browser verification is claimed.
+
 ## Operating position
 
 The public website remains a development pilot only. Do not accept real service bookings or sensitive personal information until all release gates below are closed. The controlled pilot area is Winnipeg, Manitoba. Do not advertise Canada-wide provider coverage until local providers are independently verified.
@@ -99,6 +105,11 @@ The owner independently confirmed the staff portal now displays “Signed in · 
 - [x] Added and verified indexes for `il_staff_roles.granted_by` and `il_staff_audit_log.actor_user_id`, covering the two staff-table foreign keys flagged by the performance advisor.
 - [ ] The security advisor still reports leaked-password protection disabled (plan-limited on the current Free plan). The no-policy notices for the staff role/audit tables are intentional: RLS is enabled and anon/authenticated privileges are revoked.
 - [ ] Performance advisor still reports two pairs of permissive SELECT policies on requests and provider responses. They serve distinct requester/provider access paths and must not be removed without replacing both paths and re-running cross-account RLS tests. Unused-index notices are expected while the pilot tables are empty; reassess after real workload exists.
+
+## Outreach compliance
+
+- Three exploratory provider/sector email drafts exist, but remain unsent. The business mailing address and complete sender identification/unsubscribe details have not been confirmed. Do not send until CASL requirements and a valid consent or other lawful basis have been reviewed.
+- No provider agreement, customer booking or paid customer is recorded.
 
 ## Release rule
 
