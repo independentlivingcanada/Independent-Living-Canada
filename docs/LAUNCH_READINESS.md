@@ -61,8 +61,8 @@ The owner independently confirmed the staff portal now displays “Signed in · 
 - [x] Provider self-approval guard and inactive-before-approval behavior tested.
 - [x] Staff approval/suspension, service deactivation and audit events tested.
 - [x] Anon/authenticated/service_role function grants reviewed.
-- [ ] Browser end-to-end form submission and account email flows still require synthetic accounts in a real browser.
-- [ ] Test provider-to-provider profile/service/response isolation and negative consent submission in a dedicated rollback-only test.
+- [ ] Browser end-to-end form submission and account email flows still require synthetic accounts in a real browser. Provider-response-specific isolation also remains to be verified.
+- [x] Provider profile/service cross-account read and update denial plus negative-consent rejection tested in a rollback-only synthetic transaction. Provider-response-specific isolation remains to be verified.
 - [ ] Confirm user-facing error messages and browser network responses do not expose private data or secrets.
 
 ### Provider verification and safeguarding
