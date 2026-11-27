@@ -6,7 +6,7 @@ Last reviewed: 2026-11-27
 
 - [x] Added `docs/REMAINING_LAUNCH_ACTIONS.md`, a detailed provider screening, synthetic browser acceptance, privacy/legal sign-off, human accessibility audit, operating-role, account-security and release checklist.
 - [x] Aligned the staff portal's CSS with the site's light-blue visual theme and updated browser theme colours across public, staff, privacy and accessibility pages.
-- [ ] The visual changes are awaiting the current GitHub Pages workflow run; no live visual/browser verification is claimed.
+- [ ] The visual changes passed GitHub Actions run 27 (`45946028667`), including JavaScript syntax and public-site safeguard checks, and Pages deployment completed successfully. Live visual/browser and assistive-technology verification are still not claimed.
 
 ## Operating position
 
