@@ -14,7 +14,7 @@ A Canada-wide concept for connecting older adults, people with disabilities, and
 - Website: https://independentlivingcanada.github.io/Independent-Living-Canada/
 - Source: https://github.com/independentlivingcanada/Independent-Living-Canada
 
-## Current status
+## Helpful navigation and trust resources\n\n- Guided support finder: https://independentlivingcanada.github.io/Independent-Living-Canada/find-support.html\n- Provider review standards: https://independentlivingcanada.github.io/Independent-Living-Canada/verification.html\n- Funding guide: https://independentlivingcanada.github.io/Independent-Living-Canada/funding.html\n- Community partnership plan: `docs/COMMUNITY_PARTNERSHIP_PLAN.md`\n\n## Current status
 
 **Development pilot only — not open for public service bookings.** Use fictional details for testing. Do not submit real personal, financial, or health information.
 
